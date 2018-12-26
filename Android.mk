@@ -1,7 +1,6 @@
-ifeq ($(call my-dir),$(call project-path-for,bt-vendor))
-
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(TARGET_QCOM_BLUETOOTH_VARIANT),bt-caf)
 # TODO:  Find a better way to separate build configs for ADP vs non-ADP devices
 ifneq ($(BOARD_IS_AUTOMOTIVE),true)
   ifneq ($(filter msm8x27 msm8974 msm8226,$(TARGET_BOARD_PLATFORM)),)
