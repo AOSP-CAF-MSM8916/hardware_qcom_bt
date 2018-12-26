@@ -1,7 +1,3 @@
-ifeq ($(call my-dir),$(call project-path-for,bt-vendor))
-
-ifeq ($(call is-vendor-board-platform,QCOM),true)
+ifeq ($(TARGET_QCOM_BLUETOOTH_VARIANT),bt-caf)
 include $(call all-named-subdir-makefiles,libbt-vendor)
-endif # is-vendor-board-platform
-
 endif
